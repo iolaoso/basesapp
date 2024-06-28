@@ -1,0 +1,5 @@
+
+// crear el proyecto de angular 
+
+ng new basesApp --no-standalone
+
