@@ -1,0 +1,22 @@
+
+<h1>LISTADO DE HEROES</h1>
+<hr>
+
+<h3 *ngIf="ultimoEliminado">Último Heroe Eliminado: <span class="text-danger">{{ ultimoEliminado }}</span></h3>
+
+
+
+<button *ngIf="heroes.length > 0; else noExistenHeroes" (click)="eliminarUltimoHeroe()" class="btn btn-danger">Eliminar último Heroe</button>
+
+<ng-template #noExistenHeroes>
+  <h3>Ya no existen Heroes</h3>
+</ng-template>
+
+
+
+<br>
+
+<ul class="list-group mt-3">
+  <!-- ngFor crea una variable item del arreglo heroes para recorrerlo -->
+  <li class="list-group-item" *ngFor="let item of heroes">{{ item }}</li>
+</ul>

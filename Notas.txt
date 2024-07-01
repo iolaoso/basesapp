@@ -1,5 +1,41 @@
 
-// crear el proyecto de angular 
+// crear el proyecto de angular
 
 ng new basesApp --no-standalone
+
+// correr el servidor
+
+ng serve -o
+
+// crear un componente
+
+ng generate component bases/contador
+
+ng g c bases/heroes
+
+// eliminar el archivo de testing
+
+heroes.component.spec.ts
+
+// crear un modulo
+
+ng g module personajes
+
+
+
+
+// ----------------------------------------------------
+// directivas
+
+*ngFor -> hace recorrido de arreglos. degine una variable para el arreglo let item of arreglo
+
+*ngIf -> hace una condicion, si se le pone el nombre de la propiedad valida si tiene algo o esta vacia
+
+
+//
+
+
+
+
+
 
