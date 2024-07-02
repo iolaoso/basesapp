@@ -1,7 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './personajes/home/home.component';
+import { ContadorComponent } from './bases/contador/contador.component';
+import { HeroesComponent } from './bases/heroes/heroes.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  //ojeto de rutas
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'contador',
+    component: ContadorComponent
+  },
+  {
+    path: 'heroes',
+    component: HeroesComponent
+  },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full'
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
