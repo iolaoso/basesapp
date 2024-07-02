@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Personaje } from '../../interfases/personaje.interface';
 
 @Component({
@@ -7,6 +7,9 @@ import { Personaje } from '../../interfases/personaje.interface';
   styleUrl: './formulario-personaje.component.css'
 })
 export class FormularioPersonajeComponent {
+
+  // para pasar los datos al padre
+  @Output() onNewPersonaje: EventEmitter<Personaje> = new EventEmitter();
 
   personajeForm: Personaje ={
     name: '',
@@ -19,8 +22,17 @@ export class FormularioPersonajeComponent {
 
     console.log(nuevoPersonaje);
 
+    if(nuevoPersonaje.name.length === 0) return;
+
+    this.onNewPersonaje.emit(nuevoPersonaje);
+
     this.personajeForm.name='';
     this.personajeForm.poder=0;
+
   }
+
+
+
+
 
 }

@@ -8,7 +8,7 @@ import { Personaje } from '../../interfases/personaje.interface';
 })
 export class ListarPersonajeComponent {
 
-  // ecorador @Input() son propiedades enviadas para su uso
+  // decorador @Input() son propiedades enviadas para su uso pasar datos al los hijos
   @Input() personajes: Personaje[] = [];
 
 }

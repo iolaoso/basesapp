@@ -24,6 +24,8 @@ export class HomeComponent {
   ];
 
   addPersonaje (personaje:Personaje){
+    console.log('addPersonaje:', personaje)
     this.personajesPadre.push(personaje);
   }
+
 }
